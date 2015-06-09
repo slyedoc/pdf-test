@@ -1,0 +1,36 @@
+<h1>PDF Object</h1>
+
+<div id="target" style="height: 400px"></div>
+
+<h3>Notes</h3>
+<ul>
+  <li>Site <a href="http://pdfobject.com/">pdfobject.com</a></li>
+  <li>Ues JS to display if no support for pdf is found</li>
+  <li>Project is dead, but its works.</li>
+</ul>
+
+
+<h3>Features</h3>
+<ul>
+  <li>Detection of PDF plugin or PDF file-handling support.
+    <ul>
+      <li>Checks for Adobe Reader.</li>
+      <li>Checks for generic support via the <span class="pre">application/pdf</span> mime type.</li>
+    </ul>
+  </li>
+  <li>Only attempts to embed PDF if support is detected.
+    <ul>
+      <li>if PDF support is detected, the <span class="pre">&lt;object&gt;</span> is embedded with all specified parameters;</li>
+      <li>if PDF support is <strong>not</strong> found, the <span class="pre">&lt;object&gt;</span> will <strong>not</strong> be embedded, and the fallback content is left as-is.</li>
+    </ul>
+  </li>
+  <li>Returns reference to the HTML <span class="pre">&lt;object&gt;</span> (similar to <span class="pre">getElementById</span>) or <span class="pre">null</span>.</li>
+  <li>If no element ID is passed into the <span class="pre">embed()</span> call, PDFObject will default to <span class="pre">document.body</span>, filling the entire browser window.</li>
+  <li>Accepts optional embed parameters, including size, id, and most <a href="http://www.adobe.com/devnet/acrobat/pdfs/pdf_open_parameters.pdf">PDF open parameters</a>.</li>
+  <li>Automatically appends extra CSS needed for full-window PDF embeds
+    <ul>
+      <li>Removes padding and margins</li>
+      <li>Fixes 100% height issue in some browsers</li>
+    </ul>
+  </li>
+</ul>
